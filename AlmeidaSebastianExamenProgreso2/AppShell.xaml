@@ -9,10 +9,6 @@
     FlyoutHeaderBehavior="CollapseOnScroll"
     Title="AlmeidaSebastianExamenProgreso2">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
     <FlyoutItem Title="Recargas">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
     </FlyoutItem>
