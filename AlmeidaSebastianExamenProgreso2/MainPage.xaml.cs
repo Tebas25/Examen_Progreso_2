@@ -16,14 +16,26 @@ namespace AlmeidaSebastianExamenProgreso2
             BindingContext = recarga;
         }
 
-        private void GuardarRecarga_Clicked(object sender, EventArgs e)
+        private async void GuardarRecarga_Clicked(object sender, EventArgs e)
         {
             SalmeidaRecarga recarga = new SalmeidaRecarga()
             {
                 Numero = EditorNumero.Text,
                 Nombre = EditorNombre.Text
             };
+            bool guardar_Recarga = _recargaRepository.CreateRecarga(recarga);
+            if (guardar_Recarga)
+            {
+                await DisplayAlert("Alerta", "Recarga realizada exitosamente", "OK");
+                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                await DisplayAlert("Alerta", "Recarga no realizada corectamente", "OK");
+            }
         }
+
+        
     }
 
 }
