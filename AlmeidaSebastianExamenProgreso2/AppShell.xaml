@@ -9,11 +9,16 @@
     FlyoutHeaderBehavior="CollapseOnScroll"
     Title="AlmeidaSebastianExamenProgreso2">
 
-    <FlyoutItem Title="Recargas">
-        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-    </FlyoutItem>
-    <FlyoutItem Title="GrindLayout">
-        <ShellContent ContentTemplate="{DataTemplate local:Salmeida_GridLayout}"/>
-    </FlyoutItem>
+    <TabBar>
+        <ShellContent
+            Title="Recargas"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
+
+        <ShellContent
+            Title="GrindLayout"
+            ContentTemplate="{DataTemplate local:Salmeida_GridLayout}"
+            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
+    </TabBar>
 
 </Shell>

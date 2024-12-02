@@ -3,10 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AlmeidaSebastianExamenProgreso2.Salmeida_GridLayout"
              Title="Salmeida_GridLayout">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" 
+               Text="Andrés"
+               TextColor="Blue"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               FontSize="100" />
+
+        <Label Grid.Row="0" Grid.Column="1" 
+               Text="Sebastián"
+               TextColor="Green"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               FontSize="100" />
+
+        <Label Grid.Row="1" Grid.Column="0" 
+               Text="Almeida"
+               TextColor="Red"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               FontSize="100" />
+        
+        <Label Grid.Row="1" Grid.Column="1" 
+               Text="Yanez"
+               TextColor="Orange"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               FontSize="100" />    
+    </Grid>
 </ContentPage>
